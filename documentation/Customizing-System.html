@@ -26,7 +26,7 @@
 		<![endif]-->
 
 		<!-- Styles -->
-		<link  rel="stylesheet" href="../vendor/twitter-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="../vendor/prettify.css" /><link  rel="stylesheet" href="/styles/style.css" />
+		<link  rel="stylesheet" href="../vendor/twitter-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="../vendor/prettify.css" /><link  rel="stylesheet" href="../styles/style.css" />
 
 		<script type="text/javascript">
 		    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
@@ -37,7 +37,7 @@
 		    }
 		</script>
 
-		<script type="text/javascript" src="//use.typekit.net/kan0fyh.js"></script>
+		<script type="text/javascript" src="/Durandal//use.typekit.net/kan0fyh.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	</head>
 	<body>
@@ -49,26 +49,26 @@
 			      <span class="icon-bar"></span>
 			      <span class="icon-bar"></span>
 			    </button>
-			    <a class="navbar-brand" href="/"><span>&nbsp;&nbsp;Durandal</span></a>
+			    <a class="navbar-brand" href="/Durandal/"><span>&nbsp;&nbsp;Durandal</span></a>
 			  </div>
 
 		    <div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						
-							<li typeof="sioc:Page" about="/get-started.html" class="">
-								<a href="/get-started.html" property="dc:title">Get Started</a>
+							<li typeof="sioc:Page" about="/Durandal/get-started.html" class="">
+								<a href="/Durandal/get-started.html" property="dc:title">Get Started</a>
 							</li>
 						
-							<li typeof="sioc:Page" about="/downloads.html" class="">
-								<a href="/downloads.html" property="dc:title">Downloads</a>
+							<li typeof="sioc:Page" about="/Durandal/downloads.html" class="">
+								<a href="/Durandal/downloads.html" property="dc:title">Downloads</a>
 							</li>
 						
-							<li typeof="sioc:Page" about="/docs.html" class="">
-								<a href="/docs.html" property="dc:title">Docs</a>
+							<li typeof="sioc:Page" about="/Durandal/docs.html" class="">
+								<a href="/Durandal/docs.html" property="dc:title">Docs</a>
 							</li>
 						
-							<li typeof="sioc:Page" about="/showcase.html" class="">
-								<a href="/showcase.html" property="dc:title">Showcase</a>
+							<li typeof="sioc:Page" about="/Durandal/showcase.html" class="">
+								<a href="/Durandal/showcase.html" property="dc:title">Showcase</a>
 							</li>
 						
 						<li class="donate">
@@ -95,11 +95,11 @@
 <p>The <a href="">system module</a> contains core APIs used by almost every other module. It also has a few strategic extensibility points that can come in handy in different scenarios.</p>
 </blockquote>
 <h3 id="module-ids">Module Ids</h3>
-<p>Durandal assigns a module id to every module that flows through RequireJS. It does this on the basis of its path, relative to the <em>baseUrl</em>. If the module is a <em>function</em>, the id is assigned to its prototype, otherwise the id is assigned to the object itself. All this behavior can be changed by replacing <a href="/documentation/api#module/system/method/setModuleId">system.setModuleId</a> and <a href="/documentation/api#module/system/method/getModuleId">system.getModuleId</a> with your own implementations.</p>
+<p>Durandal assigns a module id to every module that flows through RequireJS. It does this on the basis of its path, relative to the <em>baseUrl</em>. If the module is a <em>function</em>, the id is assigned to its prototype, otherwise the id is assigned to the object itself. All this behavior can be changed by replacing <a href="/Durandal/documentation/api#module/system/method/setModuleId">system.setModuleId</a> and <a href="/Durandal/documentation/api#module/system/method/getModuleId">system.getModuleId</a> with your own implementations.</p>
 <h3 id="module-value-resolution">Module Value Resolution</h3>
-<p>When Durandal gets tasked with manually requiring your module, such as when the <a href="/documentation/api#module/router">router</a> attempts to activate a module for a url, then the framework must attempt to resolve an object instance from the module. The default behavior is that if the module is a function, it will be called with <em>new</em> and the result returned, otherwise the module itself will be returned. If you need to change this behavior, you can replace <a href="/documentation/api#module/system/method/resolveObject">system.resolveObject</a> with your own implementation. <a href="https://gist.github.com/Jaben/6118234">Here&#39;s a cool gist</a> that shows how to patch this API to work with earlier versions of TypeScript (pre 0.9).</p>
+<p>When Durandal gets tasked with manually requiring your module, such as when the <a href="/Durandal/documentation/api#module/router">router</a> attempts to activate a module for a url, then the framework must attempt to resolve an object instance from the module. The default behavior is that if the module is a function, it will be called with <em>new</em> and the result returned, otherwise the module itself will be returned. If you need to change this behavior, you can replace <a href="/Durandal/documentation/api#module/system/method/resolveObject">system.resolveObject</a> with your own implementation. <a href="https://gist.github.com/Jaben/6118234">Here&#39;s a cool gist</a> that shows how to patch this API to work with earlier versions of TypeScript (pre 0.9).</p>
 <h3 id="guids">GUIDs</h3>
-<p>Durandal can generate simple V4 UUIDs with <a href="/documentation/api#module/system/method/guid">system.guid()</a>. However, if you are generating these for use as a database key, you may want to investigate patching this with a more robust solution, such as <a href="https://github.com/broofa/node-uuid">node-uuid</a>.</p>
+<p>Durandal can generate simple V4 UUIDs with <a href="/Durandal/documentation/api#module/system/method/guid">system.guid()</a>. However, if you are generating these for use as a database key, you may want to investigate patching this with a more robust solution, such as <a href="https://github.com/broofa/node-uuid">node-uuid</a>.</p>
 
 </section>
 
@@ -120,7 +120,7 @@
 		<script src="../vendor/jquery.js"></script>
 		<script src="../vendor/modernizr.js"></script>
 		<script src="../vendor/prettify.js"></script>
-		<script src="/scripts/behavior.js"></script>
+		<script src="../scripts/behavior.js"></script>
 
 		
 

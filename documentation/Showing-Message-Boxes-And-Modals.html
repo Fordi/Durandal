@@ -26,7 +26,7 @@
 		<![endif]-->
 
 		<!-- Styles -->
-		<link  rel="stylesheet" href="../vendor/twitter-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="../vendor/prettify.css" /><link  rel="stylesheet" href="/styles/style.css" />
+		<link  rel="stylesheet" href="../vendor/twitter-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="../vendor/prettify.css" /><link  rel="stylesheet" href="../styles/style.css" />
 
 		<script type="text/javascript">
 		    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
@@ -37,7 +37,7 @@
 		    }
 		</script>
 
-		<script type="text/javascript" src="//use.typekit.net/kan0fyh.js"></script>
+		<script type="text/javascript" src="/Durandal/Durandal//use.typekit.net/kan0fyh.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	</head>
 	<body>
@@ -49,26 +49,26 @@
 			      <span class="icon-bar"></span>
 			      <span class="icon-bar"></span>
 			    </button>
-			    <a class="navbar-brand" href="/"><span>&nbsp;&nbsp;Durandal</span></a>
+			    <a class="navbar-brand" href="/Durandal/Durandal/"><span>&nbsp;&nbsp;Durandal</span></a>
 			  </div>
 
 		    <div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						
-							<li typeof="sioc:Page" about="/get-started.html" class="">
-								<a href="/get-started.html" property="dc:title">Get Started</a>
+							<li typeof="sioc:Page" about="/Durandal/Durandal/get-started.html" class="">
+								<a href="/Durandal/Durandal/get-started.html" property="dc:title">Get Started</a>
 							</li>
 						
-							<li typeof="sioc:Page" about="/downloads.html" class="">
-								<a href="/downloads.html" property="dc:title">Downloads</a>
+							<li typeof="sioc:Page" about="/Durandal/Durandal/downloads.html" class="">
+								<a href="/Durandal/Durandal/downloads.html" property="dc:title">Downloads</a>
 							</li>
 						
-							<li typeof="sioc:Page" about="/docs.html" class="">
-								<a href="/docs.html" property="dc:title">Docs</a>
+							<li typeof="sioc:Page" about="/Durandal/Durandal/docs.html" class="">
+								<a href="/Durandal/Durandal/docs.html" property="dc:title">Docs</a>
 							</li>
 						
-							<li typeof="sioc:Page" about="/showcase.html" class="">
-								<a href="/showcase.html" property="dc:title">Showcase</a>
+							<li typeof="sioc:Page" about="/Durandal/Durandal/showcase.html" class="">
+								<a href="/Durandal/Durandal/showcase.html" property="dc:title">Showcase</a>
 							</li>
 						
 						<li class="donate">
@@ -123,8 +123,8 @@
 </blockquote>
 
 <h3 id="message-boxes">Message Boxes</h3>
-<p>Showing a message box in Durandal is easy. Simply configure the plugin, then require the <a href="/documentation/api#module/app">app module</a> and call <em>showMessage</em>. </p>
-<p>Let&#39;s first see how to install the plugin. In your <em>main.js</em> file, before calling <a href="/documentation/api#module/app/method/start">app.start()</a> you will need to make a call to <a href="/documentation/api#module/app/method/configurePlugins">configurePlugins(...)</a>. Here&#39;s what your code might look like:</p>
+<p>Showing a message box in Durandal is easy. Simply configure the plugin, then require the <a href="/Durandal/Durandal/documentation/api#module/app">app module</a> and call <em>showMessage</em>. </p>
+<p>Let&#39;s first see how to install the plugin. In your <em>main.js</em> file, before calling <a href="/Durandal/Durandal/documentation/api#module/app/method/start">app.start()</a> you will need to make a call t="/Durandal/a href="/Durandal/documentation/api#module/app/method/configurePlugins">configurePlugins(...)</a>. Here&#39;s what your code might look like:</p>
 <pre class="prettyprint linenums">define([&#39;durandal/app&#39;],  function (app) {
     app.configurePlugins({
         dialog: true
@@ -139,7 +139,7 @@
 ...
 app.showMessage(&#39;This is a message.&#39;);</pre>
 <p>This will display a message box with the default title and the message &quot;This is a message.&quot; It will also display an &quot;Ok&quot; button.
-By default, your message box&#39;s title is set to your <a href="/documentation/api#module/app/property/title">app.title</a>. If you haven&#39;t set the title, then it defaults to &quot;Application&quot;.
+By default, your message box&#39;s title is set to your <a href="/Durandal/Durandal/documentation/api#module/app/property/title">app.title</a>. If you haven&#39;t set the title, then it defaults to &quot;Application&quot;.
 You can easily add a custom title by providing the second parameter. Here&#39;s an example:</p>
 <pre class="prettyprint linenums">app.showMessage(&#39;This is a message.&#39;, &#39;Demo&#39;);</pre>
 <p>This message box is the same as the first, but with &quot;Demo&quot; displayed in the header. Now, suppose you want more than just an &quot;Ok&quot; button. 
@@ -201,7 +201,7 @@ First, let&#39;s see the implementation of <em>showMessage</em>:</p>
 <pre class="prettyprint linenums">showMessage: function (message, title, options, autoclose, settings) {
     return dialog.showMessage(message, title, options, autoclose, settings);
 }</pre>
-<p>This shows the typical technique for displaying a custom dialog. All you have to do is pass an object to <a href="/documentation/api#module/dialog/method/show">dialog.show</a> and under the covers it will use the composition system to locate its view and bind the two together. Then, it will display it as a dialog.</p>
+<p>This shows the typical technique for displaying a custom dialog. All you have to do is pass an object to <a href="/Durandal/Durandal/documentation/api#module/dialog/method/show">dialog.show</a> and under the covers it will use the composition system to locate its view and bind the two together. Then, it will display it as a dialog.</p>
 <p>Let&#39;s see part of the implementation of <em>MessageBox</em> and its view.</p>
 <p><strong>messageBox.js</strong></p>
 <pre class="prettyprint linenums">var MessageBox = function (message, title, options, autoclose, settings) {
@@ -230,10 +230,10 @@ MessageBox.prototype.selectOption = function (dialogResult) {
         &lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</pre>
-<p>As you can see, <a href="/documentation/api#module/dialog/class/MessageBox">MessageBox</a> is just a normal prototype-based class. It stores its parameters and provides a function to select a particular option.
+<p>As you can see, <a href="/Durandal/Durandal/documentation/api#module/dialog/class/MessageBox">MessageBox</a> is just a normal prototype-based class. It stores its parameters and provides a function to select a particular option.
 The view is located by the composition system and bound to it before displaying it in a modal style. The view uses a standard set of Knockout bindings along with some css classes.
-There&#39;s one important detail to notice. Have a look at the <a href="/documentation/api#class/MessageBox/method/selectOption">selectOption</a> function of the modal implementation.
-It uses the <a href="/documentation/api#module/dialog">dialog module&#39;s</a> <a href="/documentation/api#module/dialog/method/close">close</a> function to dismiss the dialog. The interesting thing about it is that you can pass it a value to return to its caller.
+There&#39;s one important detail to notice. Have a look at the <a href="/Durandal/Durandal/documentation/api#class/MessageBox/method/selectOption">selectOption</a> function of the modal implementation.
+It uses the <a href="/Durandal/Durandal/documentation/api#module/dialog">dialog module&#39;s</a="/Durandal/a href="/Durandal/documentation/api#module/dialog/method/close">close</a> function to dismiss the dialog. The interesting thing about it is that you can pass it a value to return to its caller.
 When the caller invokes <em>show</em> a promise is returned which, as mentioned above, resolves when the dialog closes and will carry with it whatever the dialog passes to <em>close</em>.
 Here&#39;s how a client might obtain that value:</p>
 <pre class="prettyprint linenums">var app = require(&#39;durandal/app&#39;);
@@ -247,7 +247,7 @@ app.showMessage(&#39;This is a message.&#39;).then(function(dialogResult){
 <h4 id="the-default-dialog-context">The Default Dialog Context</h4>
 <p>The default context has the following basic behavior:</p>
 <ol>
-<li>Displays a blockout over your app. You can change it&#39;s opacity by using <a href="/documentation/api#module/dialog/method/getContext">getContext</a> and changing the context&#39;s blockoutOpacity property.</li>
+<li>Displays a blockout over your app. You can change it&#39;s opacity by using <a href="/Durandal/Durandal/documentation/api#module/dialog/method/getContext">getContext</a> and changing the context&#39;s blockoutOpacity property.</li>
 <li>Displays your dialog&#39;s view centered on the screen.</li>
 <li>Displays your dialog&#39;s view by toggling its opacity from 0 to 1 when ready. This allows for a css 3 transition animation. (Default styles are provided by bootstrap and the durandal.css under source.)</li>
 <li>When displaying your view, if it&#39;s root html element has a class of <em>autoclose</em> then the context will ensure that clicking outside of your dialog automatically causes it to close.</li>
@@ -259,17 +259,17 @@ app.showMessage(&#39;This is a message.&#39;).then(function(dialogResult){
 <p><em>Note:</em> The default dialog context has some required css for positioning which can be found in the durandal.css file. It assumes that the target browser supports <code>position: fixed</code>. If your target browsers do not support this, you should replace the default dialog context with a custom implementation.</p>
 </blockquote>
 <h4 id="custom-dialog-contexts">Custom Dialog Contexts</h4>
-<p>You an use the <a href="/documentation/api#module/dialog/method/addContext">addContext</a> API to add a new dialog context to the system. The context should have the following functions defined:</p>
+<p>You an use the <a href="/Durandal/Durandal/documentation/api#module/dialog/method/addContext">addContext</a> API to add a new dialog context to the system. The context should have the following functions defined:</p>
 <ul>
-<li><p><a href="/documentation/api#class/DialogContext/method/addHost">addHost(dialog)</a> - In this function, you are expected to add a DOM element to the tree which will serve as the &quot;host&quot; for the dialog&#39;s composed view. You must add a property called <em>host</em> to the <em>dialog</em> object which references the DOM element. It is this host which is passed to the <em>composition</em> module.</p>
+<li><p><a href="/Durandal/Durandal/documentation/api#class/DialogContext/method/addHost">addHost(dialog)</a> - In this function, you are expected to add a DOM element to the tree which will serve as the &quot;host&quot; for the dialog&#39;s composed view. You must add a property called <em>host</em> to the <em>dialog</em> object which references the DOM element. It is this host which is passed to the <em>composition</em> module.</p>
 </li>
-<li><p><a href="/documentation/api#class/DialogContext/method/removeHost">removeHost(dialog)</a> - This function is expected to remove any DOM machinery associated with the specified <em>dialog</em> and do any other necessary cleanup.</p>
+<li><p><a href="/Durandal/Durandal/documentation/api#class/DialogContext/method/removeHost">removeHost(dialog)</a> - This function is expected to remove any DOM machinery associated with the specified <em>dialog</em> and do any other necessary cleanup.</p>
 </li>
-<li><p><a href="/documentation/api#class/DialogContext/method/compositionComplete">compositionComplete(child, parent, context)</a> - This function is called after the dialog is fully composed into the DOM, allowing your implementation to do any final modifications, such as positioning or animation. You can obtain the original <em>dialog</em> object via <code>dialog.getDialog(context.model);</code>.</p>
+<li><p><a href="/Durandal/Durandal/documentation/api#class/DialogContext/method/compositionComplete">compositionComplete(child, parent, context)</a> - This function is called after the dialog is fully composed into the DOM, allowing your implementation to do any final modifications, such as positioning or animation. You can obtain the original <em>dialog</em> object via <code>dialog.getDialog(context.model);</code>.</p>
 </li>
 </ul>
 <blockquote>
-<p><strong>Note:</strong> Whenever you call <a href="/documentation/api#module/dialog/method/addContext">addContext</a> the <em>dialog</em> module will add a helper method to itself to facillitate showing dialogs in that context. For example, if your create and add a context called &#39;bubble&#39; for showing bubble popups, you could show these popups in two different ways: <code>dialog.show(viewModel, activationData, &#39;bubble&#39;)</code> or <code>dialog.showBubble(viewModel, activationData)</code></p>
+<p><strong>Note:</strong> Whenever you call <a href="/Durandal/Durandal/documentation/api#module/dialog/method/addContext">addContext</a> the <em>dialog</em> module will add a helper method to itself to facillitate showing dialogs in that context. For example, if your create and add a context called &#39;bubble&#39; for showing bubble popups, you could show these popups in two different ways: <code>dialog.show(viewModel, activationData, &#39;bubble&#39;)</code> or <code>dialog.showBubble(viewModel, activationData)</code></p>
 </blockquote>
 <h3 id="repositioning-dialogs-after-their-contents-have-been-changed">Repositioning Dialogs After Their Contents Have Been Changed</h3>
 <p>On the default dialog context, there is a method to reposition a dialog after its contents have been changed (called <em>reposition</em>). You can call it as follows:</p>
@@ -298,7 +298,7 @@ theDialog.context.reposition(view);</pre>
 		<script src="../vendor/jquery.js"></script>
 		<script src="../vendor/modernizr.js"></script>
 		<script src="../vendor/prettify.js"></script>
-		<script src="/scripts/behavior.js"></script>
+		<script src="../scripts/behavior.js"></script>
 
 		
 

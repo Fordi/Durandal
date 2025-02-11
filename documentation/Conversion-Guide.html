@@ -26,7 +26,7 @@
 		<![endif]-->
 
 		<!-- Styles -->
-		<link  rel="stylesheet" href="../vendor/twitter-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="../vendor/prettify.css" /><link  rel="stylesheet" href="/styles/style.css" />
+		<link  rel="stylesheet" href="../vendor/twitter-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="../vendor/prettify.css" /><link  rel="stylesheet" href="../styles/style.css" />
 
 		<script type="text/javascript">
 		    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
@@ -37,7 +37,7 @@
 		    }
 		</script>
 
-		<script type="text/javascript" src="//use.typekit.net/kan0fyh.js"></script>
+		<script type="text/javascript" src="/Durandal//use.typekit.net/kan0fyh.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	</head>
 	<body>
@@ -49,26 +49,26 @@
 			      <span class="icon-bar"></span>
 			      <span class="icon-bar"></span>
 			    </button>
-			    <a class="navbar-brand" href="/"><span>&nbsp;&nbsp;Durandal</span></a>
+			    <a class="navbar-brand" href="/Durandal/"><span>&nbsp;&nbsp;Durandal</span></a>
 			  </div>
 
 		    <div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						
-							<li typeof="sioc:Page" about="/get-started.html" class="">
-								<a href="/get-started.html" property="dc:title">Get Started</a>
+							<li typeof="sioc:Page" about="/Durandal/get-started.html" class="">
+								<a href="/Durandal/get-started.html" property="dc:title">Get Started</a>
 							</li>
 						
-							<li typeof="sioc:Page" about="/downloads.html" class="">
-								<a href="/downloads.html" property="dc:title">Downloads</a>
+							<li typeof="sioc:Page" about="/Durandal/downloads.html" class="">
+								<a href="/Durandal/downloads.html" property="dc:title">Downloads</a>
 							</li>
 						
-							<li typeof="sioc:Page" about="/docs.html" class="">
-								<a href="/docs.html" property="dc:title">Docs</a>
+							<li typeof="sioc:Page" about="/Durandal/docs.html" class="">
+								<a href="/Durandal/docs.html" property="dc:title">Docs</a>
 							</li>
 						
-							<li typeof="sioc:Page" about="/showcase.html" class="">
-								<a href="/showcase.html" property="dc:title">Showcase</a>
+							<li typeof="sioc:Page" about="/Durandal/showcase.html" class="">
+								<a href="/Durandal/showcase.html" property="dc:title">Showcase</a>
 							</li>
 						
 						<li class="donate">
@@ -92,7 +92,7 @@
   <h1 id="converting-a-durandal-1-x-project-to-2-0">Converting a Durandal 1.x Project to 2.0</h1>
 <h4 id="-"> </h4>
 <blockquote>
-<p>There were significant breaking changes between the 1.x version series and 2.0. Below you will find details of how to convert an existing project to the new version. For additional information, see the <a href="/documentation/api">API Documentation</a> or the <a href="/pages/docs">various &quot;How To&quot; guides</a>.</p>
+<p>There were significant breaking changes between the 1.x version series and 2.0. Below you will find details of how to convert an existing project to the new version. For additional information, see the <a href="/Durandal/documentation/api">API Documentation</a> or the <a href="/Durandal/pages/docs">various &quot;How To&quot; guides</a>.</p>
 </blockquote>
 <h3 id="re-locate-durandal">Re-locate Durandal</h3>
 <p>In the 1.x version series, Durandal was located under your <code>App</code> folder. In 2.0, the preferred location is side-by-side with other 3rd party scripts. This relocation allows Durandal to more easily be updated and tracked in the same way you do other libraries. It also provides a cleaner separation of the framework code from your application code.</p>
@@ -443,7 +443,7 @@ define([&#39;durandal/system&#39;, &#39;durandal/app&#39;, &#39;durandal/viewLoc
 <li>In 1.x, each widget resided in a folder and had a <em>controller.js</em> and a <em>view.html</em>. The only change to this structure and naming is that <em>controller.js</em> should now be named <em>viewmodel.js</em>. We felt this naming was more consistent with the rest of the framework.</li>
 <li>Widgets are no longer passed any information in the constructor function. Instead, a widget&#39;s settings are passed to its <code>activate</code> function. This makes widgets much more consistent with the way that normal composition works. With a widget, its settings essentially become the composition&#39;s <em>activationData</em>.</li>
 </ol>
-<p>If you customized widget mapping, have a look at the new API&#39;s <a href="/documentation/api#module/widget">map and convert methods</a>.</p>
+<p>If you customized widget mapping, have a look at the new API&#39;s <a href="/Durandal/documentation/api#module/widget">map and convert methods</a>.</p>
 <h3 id="fix-activators">Fix Activators</h3>
 <p>Most developers don&#39;t use <em>activators</em> directly. However, if you use the <code>viewModel.activator()</code> API, it has changed. As mentioned above, the <code>viewModel</code> module has been renamed to <code>activator</code>. Additionally, the factory method has been renamed to <code>create</code>. So, the previous API call would now be <code>activator.create();</code>. If you used the <code>areSameItem</code> override, then you should know that its signature has slightly changed: <code>areSameItem(currentItem, newItem, currentActivationData, newActivationData)</code>.</p>
 <h3 id="fix-custom-transitions">Fix Custom Transitions</h3>
@@ -452,7 +452,7 @@ define([&#39;durandal/system&#39;, &#39;durandal/app&#39;, &#39;durandal/viewLoc
 <ol>
 <li>Removed <code>app.adaptToDevice();</code></li>
 <li>Calling <code>system.acquire();</code> with multiple ids or an array of ids, results in an array of modules being returned.</li>
-<li>If you customized the <code>viewEngine</code> module, you should look at the changes to <a href="/documentation/api#module/viewEngine/method/parseMarkup">parseMarkup</a> and <a href="/documentation/api#module/viewEngine/method/processMarkup">processMarkup</a>.</li>
+<li>If you customized the <code>viewEngine</code> module, you should look at the changes to <a href="/Durandal/documentation/api#module/viewEngine/method/parseMarkup">parseMarkup</a> and <a href="/Durandal/documentation/api#module/viewEngine/method/processMarkup">processMarkup</a>.</li>
 <li>Removed the .NET Optimizer in favor of <em>Weyland</em>, the new cross-platform build tool for Durandal.</li>
 </ol>
 <blockquote>
@@ -478,7 +478,7 @@ define([&#39;durandal/system&#39;, &#39;durandal/app&#39;, &#39;durandal/viewLoc
 		<script src="../vendor/jquery.js"></script>
 		<script src="../vendor/modernizr.js"></script>
 		<script src="../vendor/prettify.js"></script>
-		<script src="/scripts/behavior.js"></script>
+		<script src="../scripts/behavior.js"></script>
 
 		
 

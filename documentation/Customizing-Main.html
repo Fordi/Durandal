@@ -26,7 +26,7 @@
 		<![endif]-->
 
 		<!-- Styles -->
-		<link  rel="stylesheet" href="../vendor/twitter-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="../vendor/prettify.css" /><link  rel="stylesheet" href="/styles/style.css" />
+		<link  rel="stylesheet" href="../vendor/twitter-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="../vendor/prettify.css" /><link  rel="stylesheet" href="../styles/style.css" />
 
 		<script type="text/javascript">
 		    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
@@ -37,7 +37,7 @@
 		    }
 		</script>
 
-		<script type="text/javascript" src="//use.typekit.net/kan0fyh.js"></script>
+		<script type="text/javascript" src="/Durandal//use.typekit.net/kan0fyh.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	</head>
 	<body>
@@ -49,26 +49,26 @@
 			      <span class="icon-bar"></span>
 			      <span class="icon-bar"></span>
 			    </button>
-			    <a class="navbar-brand" href="/"><span>&nbsp;&nbsp;Durandal</span></a>
+			    <a class="navbar-brand" href="/Durandal/"><span>&nbsp;&nbsp;Durandal</span></a>
 			  </div>
 
 		    <div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						
-							<li typeof="sioc:Page" about="/get-started.html" class="">
-								<a href="/get-started.html" property="dc:title">Get Started</a>
+							<li typeof="sioc:Page" about="/Durandal/get-started.html" class="">
+								<a href="/Durandal/get-started.html" property="dc:title">Get Started</a>
 							</li>
 						
-							<li typeof="sioc:Page" about="/downloads.html" class="">
-								<a href="/downloads.html" property="dc:title">Downloads</a>
+							<li typeof="sioc:Page" about="/Durandal/downloads.html" class="">
+								<a href="/Durandal/downloads.html" property="dc:title">Downloads</a>
 							</li>
 						
-							<li typeof="sioc:Page" about="/docs.html" class="">
-								<a href="/docs.html" property="dc:title">Docs</a>
+							<li typeof="sioc:Page" about="/Durandal/docs.html" class="">
+								<a href="/Durandal/docs.html" property="dc:title">Docs</a>
 							</li>
 						
-							<li typeof="sioc:Page" about="/showcase.html" class="">
-								<a href="/showcase.html" property="dc:title">Showcase</a>
+							<li typeof="sioc:Page" about="/Durandal/showcase.html" class="">
+								<a href="/Durandal/showcase.html" property="dc:title">Showcase</a>
 							</li>
 						
 						<li class="donate">
@@ -103,10 +103,10 @@ define(&#39;knockout&#39;, ko);</pre>
 <h4 id="amd-ify-all-libraries">AMD-ify All Libraries</h4>
 <p>Another option is to place only the RequireJS script reference in your index.html page and then use RequireJS to load up all 3rd party libraries. This technique has advantages of cleaning up global scope and possibly improving first-time app loading. However, it is more involved and sometimes can be...unpleasant if you are working with libraries that aren&#39;t built for AMD but are dependent on libraries that are. You should make sure you are significantly comfortable with RequireJS <a href="http://requirejs.org/docs/api.html#config-shim">path and shim config</a> before attempting this approach.</p>
 <h3 id="configuring-plugins">Configuring Plugins</h3>
-<p>As part of your main configuration, you are going to want to decide which plugins to install. There is one particular plugin I want to highlight here: the <a href="/documentation/api#module/observable">observable</a> plugin. There are great benefits to using this plugin, but you must understand that when you do so, you will not be able to run your app in a non-ES5 browser. Installing this plugin will change the way you write your code and there is no way to gracefully fallback. See the docs on <a href="/documentation/Binding-Plain-Javascript-Objects">binding plain JavaScript Objects</a> for more information.</p>
+<p>As part of your main configuration, you are going to want to decide which plugins to install. There is one particular plugin I want to highlight here: the <a href="/Durandal/documentation/api#module/observable">observable</a> plugin. There are great benefits to using this plugin, but you must understand that when you do so, you will not be able to run your app in a non-ES5 browser. Installing this plugin will change the way you write your code and there is no way to gracefully fallback. See the docs on <a href="/Durandal/documentation/Binding-Plain-Javascript-Objects">binding plain JavaScript Objects</a> for more information.</p>
 <h3 id="view-location-and-project-structure">View Location and Project Structure</h3>
-<p>The <a href="/documentation/api#module/viewLocator">viewLocator</a> has an API called <a href="/documentation/api#module/viewLocator/method/useConvention">useConvention</a>. This allows you to set up a very basic naming replacement between module ids and view paths. For example, if you did this: <code>viewLocator.useConvention(&#39;viewmodels&#39;, &#39;views&#39;);</code> then when the view locator attempted to conventionally find a view for a module with id <em>viewmodels/customer</em> it would map it to <em>views/customer</em>. A wide range of developers prefer to organize their code into <em>viewmodels</em> and <em>views</em> folders, so you can actually achieve this with the following <code>viewLocator.useConvention();</code>.</p>
-<p>While the above convention may be nice for smaller projects, we have found that it doesn&#39;t scale as well to larger projects. In this case, it is more beneficial to organize your code by application features, rather than technical category. Still, in other cases, you may need much more advanced control over view location than is provided by the simple <a href="/documentation/api#module/viewLocator/method/useConvention">useConvention</a> API. Don&#39;t worry, you have complete control. For information on this, have a read through <a href="/documentation/View-Location">View Location &amp; Customization</a>.</p>
+<p>The <a href="/Durandal/documentation/api#module/viewLocator">viewLocator</a> has an API called <a href="/Durandal/documentation/api#module/viewLocator/method/useConvention">useConvention</a>. This allows you to set up a very basic naming replacement between module ids and view paths. For example, if you did this: <code>viewLocator.useConvention(&#39;viewmodels&#39;, &#39;views&#39;);</code> then when the view locator attempted to conventionally find a view for a module with id <em>viewmodels/customer</em> it would map it to <em>views/customer</em>. A wide range of developers prefer to organize their code into <em>viewmodels</em> and <em>views</em> folders, so you can actually achieve this with the following <code>viewLocator.useConvention();</code>.</p>
+<p>While the above convention may be nice for smaller projects, we have found that it doesn&#39;t scale as well to larger projects. In this case, it is more beneficial to organize your code by application features, rather than technical category. Still, in other cases, you may need much more advanced control over view location than is provided by the simple <a href="/Durandal/documentation/api#module/viewLocator/method/useConvention">useConvention</a> API. Don&#39;t worry, you have complete control. For information on this, have a read through <a href="/Durandal/documentation/View-Location">View Location &amp; Customization</a>.</p>
 
 </section>
 
@@ -127,7 +127,7 @@ define(&#39;knockout&#39;, ko);</pre>
 		<script src="../vendor/jquery.js"></script>
 		<script src="../vendor/modernizr.js"></script>
 		<script src="../vendor/prettify.js"></script>
-		<script src="/scripts/behavior.js"></script>
+		<script src="../scriptsts/behavior.js"></script>
 
 		
 
